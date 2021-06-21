@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading</title>
+    <script src="assets/js/lazysizes.min.js" async=""></script>
+</head>
+
+<body>
+    <div class="s">
+        <script>
+            window.lazySizesConfig = window.lazySizesConfig || {};
+            window.lazySizesConfig.customMedia = {
+                '--small': '(max-width: 480px)',
+                '--medium': '(max-width: 900px)',
+                '--large': '(max-width: 1400px)',
+            };
+        </script>
+
+
+        <!-- <picture>
+
+            <source data-srcset="http://placehold.it/500x600/11e87f/fff" media="--small" />
+            <source data-srcset="http://placehold.it/700x300" media="--medium" />
+            <source data-srcset="http://placehold.it/1400x600/e8117f/fff" media="--large" />
+            <source data-srcset="http://placehold.it/1800x900/117fe8/fff" />
+
+            <img data-src="http://placehold.it/1400x600/e8117f/fff" class="lazyload" alt="image with artdirection" />
+        </picture> -->
+        <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+
+        <!-- // For Products... -->
+        <img src="assets/img/Banner/width.jpg"
+            srcset="assets/img/Banner/300-width.jpg 300w, assets/img/Banner/600-width.jpg 600w, assets/img/Banner/900-width.jpg 900w, assets/img/Banner/1200-width.jpg"
+            sizes="80vw" alt="Image description" class="lazyload">
+
+
+        <!-- // For Banner and Slider Images.. -->
+        <!-- <picture>
+
+            <source data-srcset="assets/img/Banner/300-width.jpg" media="--small" />
+            <source data-srcset="assets/img/Banner/600-width.jpg" media="--medium" />
+            <source data-srcset="assets/img/Banner/900-width.jpg" media="--large" />
+            <source data-srcset="assets/img/Banner/1200-width.jpg" />
+
+            <img data-src="assets/img/Banner/width.jpg" class="lazyload" alt="image with artdirection" />
+        </picture> -->
+
+
+
+
+    </div>
+</body>
+
+</html>

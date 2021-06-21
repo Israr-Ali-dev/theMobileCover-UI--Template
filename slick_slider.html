@@ -1,0 +1,138 @@
+<html>
+
+<head>
+  <title>slick slider
+  </title>
+  <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css" />
+  <style>
+    .responsive-ig-slider:hover .slick-prev {
+      display: block !important
+    }
+
+    .responsive-ig-slider:hover .slick-next {
+      display: block !important
+    }
+
+    .slick-prev {
+      left: 36px;
+    }
+
+    .slick-next {
+      right: 36px;
+    }
+
+    .slick-prev,
+    .slick-next {
+      display: none !important;
+      background: rgba(0, 0, 0, 0.4) !important;
+      border-radius: 100px;
+      width: 40px !important;
+      height: 40px !important;
+    }
+
+
+    .slick-next:hover,
+    .slick-prev:hover {
+      background: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: #f2a365 !important;
+    }
+
+    .slide-box {
+      width: 220px;
+      height: 220px;
+      /* border: 1px solid black; */
+      margin: 5px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .slide-box img:hover {
+      -ms-transform: scale(1.2);
+      /* IE 9 */
+      -webkit-transform: scale(1.2);
+      /* Safari 3-8 */
+      transform: scale(1.2);
+      transition: transform 5s;
+    }
+
+
+    .slide-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="responsive-ig-slider">
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+    <div class="slide-box"><img src="assets/img/insta.jpg"></div>
+  </div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+  <script type="text/javascript" src="assets/js/slick-1.4.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.responsive-ig-slider').slick({
+        // dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        arrows: true,
+
+
+        // mobileFirst: true,
+        responsive: [{
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+
+              // dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              mobileFirst: true
+            }
+          }
+
+        ]
+      });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Slider</title>
+    <style>
+        body,
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: inherit;
+            display: block;
+            margin: 3em;
+            text-align: center;
+        }
+
+        main {
+            background-color: #c1c1c1;
+            padding: 50px 0;
+            margin: 20px auto;
+            max-width: 999px;
+            width: 100%;
+        }
+
+        .horizontal-slider.slick-dotted,
+        .vertical-slider.slick-dotted {
+            margin-bottom: 0;
+        }
+
+        .horizontal-slider {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .horizontal-slider .slide .slide-content {
+            /* border: 2.5em solid #fff;
+            margin: 5em; */
+        }
+
+        .vertical-slider {
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .vertical-slider>.slick-dots {
+            bottom: auto;
+            left: 0.5em;
+            padding: 0;
+            right: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+        }
+
+        .vertical-slider>.slick-dots li {
+            display: block;
+            margin: 0 0.125em;
+        }
+
+        .vertical-slider>.slick-dots li button {
+            padding: 0.125em;
+        }
+
+        .vertical-slider .slide {
+            height: auto;
+        }
+
+        .slide {
+            color: #fff;
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .vertical-slide:nth-child(1n) {
+            background-color: indianred;
+        }
+
+        .vertical-slide:nth-child(2n) {
+            background-color: dodgerblue;
+        }
+
+        .vertical-slide:nth-child(3n) {
+            background-color: burlywood;
+        }
+
+        .vertical-slide:nth-child(4n) {
+            background-color: sandybrown;
+        }
+
+        .slide-content {
+            display: block;
+            position: relative;
+            text-align: center;
+        }
+
+        .slick-dots {
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: auto;
+        }
+
+        .slick-dots li button::before {
+            color: #fff;
+        }
+
+        .slick-dots li.slick-active button::before {
+            color: #fff;
+        }
+
+        .slick-prev,
+        .slick-next {
+            z-index: 10;
+        }
+
+        .slick-next {
+            right: 35px;
+        }
+
+        .slick-prev {
+            left: 35px;
+        }
+
+        .responsive {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="vertical-slider">
+            <div class="slide vertical-slide">
+                <div class="slide-content">
+                    <div class="horizontal-slider">
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide vertical-slide">
+                <div class="slide-content">
+                    <div class="horizontal-slider">
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <img class="responsive"
+                                    src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide vertical-slide">
+                <div class="slide-content">
+                    <img src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                </div>
+            </div>
+            <div class="slide vertical-slide">
+                <div class="slide-content">
+                    <img src="assets/img/products/i11p-i-c-stripes-3-a-1_400x385b.jpg?v=1589906528" />
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> -->
+
+    <script>
+        (function ($) {
+            $(function () {
+                $('.horizontal-slider').slick({
+                    arrows: false,
+                    dots: false,
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    // autoplaySpeed: 10000,
+                    // fade: true
+
+                });
+
+                $('.vertical-slider').slick({
+                    arrows: false,
+                    dots: false,
+                    edgeFriction: .5,
+                    infinite: false,
+                    vertical: true,
+                    verticalSwiping: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                });
+
+                // $('.vertical-slider').mousewheel(function (e) {
+                //     if (e.deltaY < 0) {
+                //         if ($(this).slick('slickCurrentSlide') == $(this).find('.slide')
+                //             .length - 1) {
+                //             return
+                //         }
+
+                //         e.preventDefault()
+                //         $(this).slick('slickNext')
+                //     } else {
+                //         if ($(this).slick('slickCurrentSlide') == 0) {
+                //             return
+                //         }
+
+                //         e.preventDefault()
+                //         $(this).slick('slickPrev')
+                //     }
+                // });
+            });
+        }(jQuery));
+    </script>
+
+</body>
+
+</html>
